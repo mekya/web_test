@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+<!-- video.js 5 -->
+<link href="https://vjs.zencdn.net/5.8/video-js.css" rel="stylesheet">
+<script src="https://vjs.zencdn.net/5.8/video.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js"></script>
+
+<link href="https://yanwsh.github.io/videojs-panorama/dist/videojs-panorama.min.css" rel="stylesheet">
+<script src="https://yanwsh.github.io/videojs-panorama/dist/videojs-panorama.v5.min.js"></script>
+<div class="wrapper">
+ <div class="videocontent" style="width:80%;max-width:640px;">
+    <video id="videojs-panorama-player" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered" 
+       crossorigin="anonymous" poster="assets/poster.jpg" controls="controls" width="640" height="264">
+       <source src="https://mekya.github.io/web_test/paragliding_360.mp4" type="video/mp4" />
+    </video>
+ </div>     
+</div>
+<script>
+var player = window.player = videojs('videojs-panorama-player', {}, function () {});
+player.panorama({
+    clickAndDrag: true,
+    callback: function () {
+      player.play();
+    }
+});
+</script>
+</body>
+</html>
