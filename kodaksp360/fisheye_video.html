@@ -27,9 +27,9 @@ var player = window.player = videojs('videojs-panorama-player', {}, function () 
 });
 player.panorama({
     clickAndDrag: true,
-    maxLat: -10,
-    initLat: -10,
-    rotateX: -Math.PI,
+    minLat: 10,
+    initLat: 10,
+    rotateX: 0,
     autoMobileOrientation: true,
     VREnable: true,
     callback: function () {
